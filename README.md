@@ -1,6 +1,6 @@
 # My build of dwm
 
-![imgmyartixrice](http://0x0.st/-scF.png)
+![imgmyartixrice](http://0x0.st/-KvC.png)
 
 ## FAQ
 
