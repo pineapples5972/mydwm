@@ -1,5 +1,5 @@
 # My build of dwm
-(Basically older build of Luke Smith's Dwm, I maintained it cuz it works out of the box with pywal)
+(Basically older build of Luke Smith's Dwm, I maintained it cuz it works out of the box with pywal).
 
 ![imgmyartixrice](http://0x0.st/-KvC.png)
 
