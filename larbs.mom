@@ -147,17 +147,15 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .HEADING 2 "Basic Programs"
 .LI
 .ITEM
-\f(CWMod+r\fP \(en vifm (file browser/manager) scratchpad integrated.
+\f(CWMod+r\fP \(en lf (file browser/manager)
 .ITEM
 \f(CWMod+R\fP \(en htop (task manager, system monitor that R*dditors use to look cool)
-.ITEM
-\f(CWMod+D\fP \(en kombini (My Multi-Purpose Launcher which launches AppImages and scripts)
 .ITEM
 \f(CWMod+e\fP \(en neomutt (email) \(en Must be first configured by running \f(CWmw add\fP.
 .ITEM
 \f(CWMod+E\fP \(en abook (contacts, addressbook, emails)
 .ITEM
-\f(CWMod+m\fP \(en mocp (music player)
+\f(CWMod+m\fP \(en ncmpcpp (music player)
 .ITEM
 \f(CWMod+w\fP \(en Web browser (Brave by default)
 .ITEM
@@ -206,10 +204,10 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .LIST OFF
 .HEADING 2 "Audio"
 .PP
-I use mocp as a music player, which doesnt required mpd and mpc.
+I use ncmpcpp as a music player, which is a front end for mpd.
 .LI
 .ITEM
-\f(CWMod+m\fP \(en mocp, the music player
+\f(CWMod+m\fP \(en ncmpcpp, the music player
 .ITEM
 \f(CWMod+.\fP \(en Next track
 .ITEM
@@ -344,11 +342,8 @@ This will overwrite the original config files though, including changes you made
 .PDF_WWW_LINK "https://lukesmith.xyz/donate" "https://lukesmith.xyz/donate"
 \(en To incentivize more development of LARBS!
 .ITEM
-.PDF_WWW_LINK "https://github.com/LukeSmithxyz" "Luke's Github Page"
+.PDF_WWW_LINK "https://github.com/LukeSmithxyz" "My Github Page"
 \(en For the code behind it!
-.ITEM
-.PDF_WWW_LINK "https://github.com/void00r" "My Github Page"
-\(en Void00r
 .ITEM
 .PDF_WWW_LINK "http://lukesmith.xyz/rss.xml" "RSS"
 \(en For updates!
