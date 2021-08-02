@@ -15,7 +15,7 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=11", "JoyPixels:pixelsize=11:antialias=true:autohint=true"  };
+static const char *fonts[]          = { "Hack:size=12", "Twemoji:pixelsize=11:antialias=true:autohint=true"  };
 static char dmenufont[]             = "monospace:size=11";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
@@ -56,7 +56,8 @@ static const Rule rules[] = {
 	{ "Popsicle",	NULL,	  NULL,	    	    1,		  1,	       0,         0,	    -1 },
 	{ "Telegram",	NULL,	  NULL,		    1 << 4,	  0,	       0,	  0,	    -1 },
 	{ "Brave",	NULL,	  NULL,		    1 << 1,	  0,	       0,	  0,        -1 },
-	{ "LibreWolf",	NULL,	  NULL,		    1 << 1,	  0,	       0,	  0,        -1 },
+	{ "Nyxt",	NULL,	  NULL,		    1 << 1,	  0,	       0,	  0,        -1 },
+	{ "LibreWolf",	NULL,	  NULL,		    1 << 1,	  1,	       0,	  0,        -1 },
 	{ "FreeTube",	NULL,	  NULL,		    1 << 2,	  0,	       0,	  0,        -1 },
 	{ TERMCLASS,   NULL,      NULL,       	    0,            0,           1,         0,        -1 },
 	{ NULL,       NULL,       "Event Tester",   0,            0,           0,         1,        -1 },
@@ -182,10 +183,10 @@ static Key keys[] = {
 	{ MODKEY,			XK_h,		setmfact,	{.f = -0.05} },
 	/* J and K are automatically bound above in STACKEYS */
 	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
-	{ MODKEY,			XK_semicolon,	shiftview,	{ .i = 1 } },
-	{ MODKEY|ShiftMask,		XK_semicolon,	shifttag,	{ .i = 1 } },
-	{ MODKEY,			XK_apostrophe,	togglescratch,	{.ui = 2} },
-	/* { MODKEY|ShiftMask,		XK_apostrophe,	spawn,		SHCMD("") }, */
+	{ MODKEY,			XK_semicolon,	togglescratch,	{ .ui = 2 } },
+	{ MODKEY|ShiftMask,		XK_semicolon,	spawn,		SHCMD("dmsearch") },
+	{ MODKEY,			XK_apostrophe,	shiftview,	{ .i = 1 } },
+	{ MODKEY|ShiftMask,		XK_apostrophe,	shifttag,	{ .i = 1 } },
 	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
 	{ MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.ui = 0} },
 
@@ -197,7 +198,7 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("") }, */
 	/* V is automatically bound above in STACKKEYS */
 	{ MODKEY,			XK_b,		togglebar,	{0} },
-	/* { MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("") }, */
+	{ MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("bookish") },
 	{ MODKEY,			XK_n,		spawn,		SHCMD("vimwikia") },
 	{ MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
 	{ MODKEY,			XK_m,		spawn,		SHCMD(TERMINAL " -e mocp") },
