@@ -15,8 +15,8 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = {"Hack:size=12", "Twemoji:pixelsize=11:antialias=true:autohint=true"};
-static char dmenufont[]             = "monospace:size=11";
+static const char *fonts[]          = {"JetBrainsMono:size=12", "Twemoji:pixelsize=11:antialias=true:autohint=true"};
+static char dmenufont[]             = "JetBrainsMono:size=11";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -33,8 +33,8 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "120x34", NULL };
-const char *spcmd2[] = {TERMINAL, "-n", "spfm", "-g", "120x34", "-e", "vu", NULL };
+const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "120x30", NULL };
+const char *spcmd2[] = {TERMINAL, "-n", "spfm", "-g", "120x30", "-e", "vu", NULL };
 const char *spcmd3[] = {TERMINAL, "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
@@ -138,6 +138,9 @@ static Key keys[] = {
 	{ MODKEY,			XK_Tab,		view,		{0} },
 	/* { MODKEY|ShiftMask,		XK_Tab,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_q,		killclient,	{0} },
+	{ MODKEY,                       XK_w,	 	scratchpad_hide, {0} },
+	{ MODKEY|ShiftMask,             XK_w, 		scratchpad_show, {0} },
+	{ MODKEY,                       XK_e,		scratchpad_remove,{0} },
 	{ MODKEY|ShiftMask,		XK_r,		togglescratch,	{.ui = 2} },
 	{ MODKEY,			XK_y,		setlayout,	{.v = &layouts[0]} }, /* spiral */
 	{ MODKEY|ShiftMask,		XK_y,		setlayout,	{.v = &layouts[1]} }, /* dwindle */
