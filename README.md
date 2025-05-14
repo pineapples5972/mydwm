@@ -1,21 +1,35 @@
-# My build of dwm
-(Basically older build of Luke Smith's Dwm, I maintained it cuz it works out of the box with pywal).
+# This DWX build
+- Uses DWM Verson 6.2
+- Replaced Tag Numbers with icons from @BreadOnPenguins build
+- And also statusbar Icon also replaced with Hack Nerd Mono Glyphs
+- Has not seperated common DWM shortcuts and users custom shortcuts for daily use
+- Has successfully implemented working multiple scratch pads.
 
 ![imgmyartixrice](http://0x0.st/-KvC.png)
 
-## FAQ
+## Some Honorable Mentioned Keybinds
+Although there are more check out `config.h` file
 
-> What are the bindings?
+| Usecase             | Keys                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Terminal | Super + Enter |
+| lf filemanager | Super + Semicolon |
+| Scratchpad Terminal | Super + Shift + Semicolon |
+| Dmenu | Super + d |
+| Vol Up | Super + plus |
+| Vol Down | Super + minus |
+| Mute | Super + Shift + m |
+| Log out Menu | Super + backspace |
+| Fibonacci Layout | Super + y |
+| Stacking Layout | Super + t |
+| Dwindle Layout | Super + u |
+| Monocol Layout | Super + i |
 
-This is suckless, mmmbud, the source code is the documentation! Check out [config.h](config.h).
 
-Just Kidding as a fork of larbs it obviously has a readme in `larbs.mom` for whole system, including the binds here.
-Press `super+F1` to view it in dwm (zathura is required for that binding).
-I haven't kept `man dwm`/`dwm.1` updated though. PRs welcome on that, lol.
 
 ## Patches and features
 
-- Clickable statusbar with my build of [dwmblocks](https://github.com/lukesmithxyz/dwmblocks).
+- Clickable statusbar with luke's build of [dwmblocks](https://github.com/lukesmithxyz/dwmblocks).
 - Reads xresources colors/variables (i.e. works with `pywal`, etc.).
 - scratchpad: Accessible with mod+shift+enter
 - New layouts: fibonacci, bstack, deck, centered master and more. All bound to keys `super+(shift+)t/y/u/i`.
@@ -28,5 +42,6 @@ I haven't kept `man dwm`/`dwm.1` updated though. PRs welcome on that, lol.
 - **work well with pywal**
 
 ## Please install `libxft-bgra`!
+[not sure in 2025 this issues must have fixed I hope so.]
 
 This build of dwm does not block color emoji in the status/info bar, so you must install [libxft-bgra](https://aur.archlinux.org/packages/libxft-bgra/) from the AUR, which fixes a libxft color emoji rendering problem, otherwise dwm will crash upon trying to render one. Hopefully this fix will be in all libxft soon enough.
